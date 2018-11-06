@@ -5,6 +5,7 @@ from .version import __version__
 
 _current_path = _os.path.dirname(_os.path.abspath(__file__))
 
+_cdn = 'unpkg.com'
 _namespace = 'dash_table_experiments'
 _project = 'dash-table-experiments'
 
@@ -20,9 +21,9 @@ _js_dist = [
     {
         'relative_package_path': 'bundle.js',
         'external_url': (
-            'https://unpkg.com/{}@{}'
+            'https://{}/{}@{}'
             '/{}/bundle.js'
-        ).format(_project, __version__, _namespace),
+        ).format(_cdn, _project, __version__, _namespace),
         'namespace': _namespace
     }
 ]
@@ -31,9 +32,9 @@ _css_dist = [
     {
         'relative_package_path': 'dash_table_experiments.css',
         'external_url': (
-            'https://unpkg.com/{}@{}'
+            'https://{}/{}@{}'
             '/{}/dash_table_experiments.css'
-        ).format(_project, __version__, _namespace),
+        ).format(_cdn, _project, __version__, _namespace),
         'namespace': _namespace
     }
 ]
